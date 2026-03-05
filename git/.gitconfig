@@ -3,8 +3,7 @@
 	name = Casey Tran
 
 [alias]
-	a = add
-	ad = add .
+	a = add .
 
 	c = commit
 	ca = commit --a
