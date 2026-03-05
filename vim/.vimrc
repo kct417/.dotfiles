@@ -1,5 +1,3 @@
-set viminfofile=NONE
-
 set smartindent
 set autoindent
 

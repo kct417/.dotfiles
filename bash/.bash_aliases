@@ -1,9 +1,12 @@
 alias update='sudo apt update && sudo apt upgrade && sudo apt autoremove'  
 
+alias ~='cd ~'
+alias ~~='cd -'
 alias ..='cd ..'
 alias ...='cd ../..'
 
-alias vi='vim'
+alias vi='vim -i NONE'
+alias vim='vim -i NONE'
 
 alias py='python3'
 alias python='python3'
