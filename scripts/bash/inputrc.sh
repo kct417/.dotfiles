@@ -1,15 +1,13 @@
 #!/usr/bin/env bash
 
-BASH_STOW_DIR=~/.dotfiles/bash
-INPUTRC_STOW=$BASH_STOW_DIR/.inputrc
+STOW_DIR=~/.dotfiles/bash
+INPUTRC_STOW=$STOW_DIR/.inputrc
 INPUTRC_USER=~/.inputrc
 
-if [ -f $INPUTRC_USER ]; then
-	mv $INPUTRC_USER $INPUTRC_STOW
-fi
-
 if [ ! -f $INPUTRC_STOW ]; then
-	echo '$include /etc/inputrc' > $INPUTRC_STOW
+	if [ ! -f $INPUTRC_USER ]; then
+		echo '$include /etc/inputrc' > $INPUTRC_STOW
+	fi
 fi
 
 if ! grep -qxF 'set completion-ignore-case On' $INPUTRC_STOW; then

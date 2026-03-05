@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-cd ~/.dotfiles
+STOW_DIR=~/.dotfiles
 
-stow -v -D bash
-stow -v -D git
-stow -v -D vim
+stow -v -D -d $STOW_DIR -t ~ bash
+stow -v -D -d $STOW_DIR -t ~ git
+stow -v -D -d $STOW_DIR -t ~ vim
 
