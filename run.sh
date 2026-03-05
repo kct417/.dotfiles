@@ -2,4 +2,5 @@
 
 ~/.dotfiles/install.sh
 ~/.dotfiles/stow.sh
+source /.dotfiles/init.sh
 

@@ -7,6 +7,6 @@
 ## Usage
 
 ```
-~/.dotfiles/run.sh
+source ~/.dotfiles/run.sh
 ```
 
