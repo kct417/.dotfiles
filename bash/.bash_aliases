@@ -4,6 +4,8 @@ alias ~='cd ~'
 alias ~~='cd -'
 alias ..='cd ..'
 alias ...='cd ../..'
+alias cd..='cd ..'
+alias cd...='cd ../..'
 
 alias vi='vim -i NONE'
 alias vim='vim -i NONE'
