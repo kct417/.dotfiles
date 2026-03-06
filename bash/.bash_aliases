@@ -1,7 +1,6 @@
 alias update='sudo apt update && sudo apt upgrade && sudo apt autoremove'  
 
-alias ~='cd ~'
-alias ~~='cd -'
+alias ~='cd -'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias cd..='cd ..'

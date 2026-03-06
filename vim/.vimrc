@@ -1,6 +1,7 @@
 syntax on
 filetype plugin indent on
 
+set showcmd
 set number
 set nostartofline
 set mouse=a
