@@ -15,10 +15,10 @@
 	cl = clone
 	clr = clone --recursive
 
-	l = log
+	l = log --pretty=oneline -n 20 --graph --abbrev-commit
 
 	ps = push
-	pl = pull
+	pl = pull --recurse-submodules
 
 	r = reset
 	rhd = reset HEAD
@@ -26,8 +26,13 @@
 	rs = reset --soft
 
 	s = status
+	d = diff
+	ds = diff --staged
 
 	subadd = submodule add
 	subup = submodule update --init --recursive
 	subsync = submodule sync --recursive
+
+[diff]
+	renames = copies
 
