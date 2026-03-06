@@ -3,6 +3,6 @@
 ## Usage
 
 ```
-source ~/.dotfiles/scripts/run.sh
+source ~/.dotfiles/bootstrap.sh
 ```
 
