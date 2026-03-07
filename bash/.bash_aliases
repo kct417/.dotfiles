@@ -17,11 +17,18 @@ help() {
 	"$@" --help
 }
 if command -v batcat >/dev/null 2>&1; then
-	alias cat='batcat -n'
+	alias cat='batcat -p'
+	alias catn='batcat -n'
 	export MANPAGER="batcat -plman"
 	help() {
     	"$@" --help 2>&1 | batcat --plain --language=help
 	}
+fi
+
+if command -v eza >/dev/null 2>&1; then
+	alias ls='eza -1'
+	alias ll='eza -loAF --no-user --no-time --git --git-repos'
+	alias tree='eza -T -L=3'
 fi
 
 mkcd () {

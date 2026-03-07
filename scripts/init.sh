@@ -8,6 +8,5 @@ source $BASH_DIR/init.sh
 source $READLINE_DIR/init.sh
 
 echo "Reloading shell: $SHELL"
-
 exec $SHELL
 
