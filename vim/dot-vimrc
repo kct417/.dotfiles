@@ -28,8 +28,3 @@ inoremap <C-y> <C-o><C-r>
 
 nnoremap <C-z> <Nop>
 
-augroup startinsert
-    autocmd!
-    autocmd VimEnter * startinsert
-augroup END
-
