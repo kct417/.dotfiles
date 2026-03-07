@@ -2,6 +2,10 @@
 	email = ctran156@calpoly.edu
 	name = Casey Tran
 
+[diff]
+	renames = copies
+	colorMoved = default
+
 [alias]
 	a = add .
 
@@ -32,7 +36,4 @@
 	subadd = submodule add
 	subup = submodule update --init --recursive
 	subsync = submodule sync --recursive
-
-[diff]
-	renames = copies
 
