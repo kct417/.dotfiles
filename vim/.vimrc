@@ -23,8 +23,9 @@ set statusline+=%=
 set statusline+=\ row:\ %l\ col:\ %c\ percent:\ %p%%
 set laststatus=2
 
+nnoremap <C-z> <C-o>u
+nnoremap <C-y> <C-o><C-r>
+
 inoremap <C-z> <C-o>u
 inoremap <C-y> <C-o><C-r>
-
-nnoremap <C-z> <Nop>
 
