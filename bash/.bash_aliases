@@ -13,8 +13,12 @@ alias py='python3'
 alias python='python3'
 
 alias cat='cat -n'
+help() {
+	"$@" --help
+}
 if command -v batcat >/dev/null 2>&1; then
 	alias cat='batcat -n'
+	export MANPAGER="batcat -plman"
 	help() {
     	"$@" --help 2>&1 | batcat --plain --language=help
 	}
