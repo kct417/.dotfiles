@@ -24,7 +24,7 @@ fi
 
 if command -v eza >/dev/null 2>&1; then
 	alias ls='eza -1'
-	alias ll='eza -loAF --no-user --no-time --git --git-repos'
+	alias ll='eza -loAF --no-user --no-time --total-size --git --git-repos'
 	alias tree='eza -T -L=3'
 fi
 

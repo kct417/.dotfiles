@@ -3,6 +3,7 @@ filetype plugin indent on
 
 set showcmd
 set number
+set relativenumber
 set nostartofline
 set mouse=a
 set scrolloff=4
