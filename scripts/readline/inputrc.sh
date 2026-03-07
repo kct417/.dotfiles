@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 STOW_DIR=~/.dotfiles/readline
-INPUTRC_STOW=$STOW_DIR/dot-inputrc
+INPUTRC_STOW=$STOW_DIR/.inputrc
 INPUTRC_USER=~/.inputrc
 
 if [ -f $INPUTRC_USER ]; then

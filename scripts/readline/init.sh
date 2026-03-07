@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 STOW_DIR=~/.dotfiles/readline
-INPUTRC_STOW=$STOW_DIR/dot-inputrc
+INPUTRC_STOW=$STOW_DIR/.inputrc
 
 if ! grep -qxF "set completion-ignore-case On" $INPUTRC_STOW; then
     echo "set completion-ignore-case On" >> $INPUTRC_STOW

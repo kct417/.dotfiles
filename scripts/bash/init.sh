@@ -2,7 +2,7 @@
 
 STOW_DIR=~/.dotfiles/bash
 AGENT_DIR=~/.dotfiles/scripts
-BASHRC_STOW=$STOW_DIR/dot-bashrc
+BASHRC_STOW=$STOW_DIR/.bashrc
 
 if ! grep -qxF "PATH=\"\$HOME/.local/bin:\$PATH\"" $BASHRC_STOW; then
     echo "PATH=\"\$HOME/.local/bin:\$PATH\"" >> $BASHRC_STOW

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 STOW_DIR=~/.dotfiles/bash
-BASHRC_STOW=$STOW_DIR/dot-bashrc
+BASHRC_STOW=$STOW_DIR/.bashrc
 BASHRC_USER=~/.bashrc
 
 if [ -f $BASHRC_USER ]; then
