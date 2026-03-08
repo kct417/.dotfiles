@@ -6,6 +6,10 @@ if ! grep -qxF "PATH=\"\$HOME/.local/bin:\$PATH\"" $BASHRC_STOW; then
     echo "PATH=\"\$HOME/.local/bin:\$PATH\"" >> $BASHRC_STOW
 fi
 
+if ! grep -qxF "if [ -f ~/.bash_aliases ]; then . ~/.bash_aliases; fi" $BASHRC_STOW; then
+	echo "if [ -f ~/.bash_aliases ]; then . ~/.bash_aliases; fi" >> $BASHRC_STOW
+fi
+
 if ! grep -qxF "source $BIN_DIR/agent.sh" $BASHRC_STOW; then
     echo "source $BIN_DIR/agent.sh" >> $BASHRC_STOW
 fi

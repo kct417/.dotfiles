@@ -1,4 +1,4 @@
-sudo apt install stow bat eza trash-cli -y
+sudo apt install gcc stow bat eza trash-cli -y
 sudo apt autoremove
 
 CRON_TIME="0 12 1 * *"

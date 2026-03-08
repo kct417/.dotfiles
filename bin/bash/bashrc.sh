@@ -1,14 +1,11 @@
 STOW_DIR=~/.dotfiles/stow/bash
 BASHRC_STOW=$STOW_DIR/.bashrc
 BASHRC_USER=~/.bashrc
-
-if [ -f $BASHRC_USER ]; then
-	touch $BASHRC_STOW
-fi
+BASHRC_DEFAULT=/etc/skel/.bashrc
 
 if [ ! -f $BASHRC_STOW ]; then
 	if [ ! -f $BASHRC_USER ]; then
-		echo 'source /etc/skel/.bashrc' > $BASHRC_STOW
+		cp $BASHRC_DEFAULT $BASHRC_STOW
 	fi
 fi
 
