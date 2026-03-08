@@ -1,6 +1,4 @@
-#!/usr/bin/env bash
-
-STOW_DIR=~/.dotfiles/bash
+STOW_DIR=~/.dotfiles/stow/bash
 BASHRC_STOW=$STOW_DIR/.bashrc
 BASHRC_USER=~/.bashrc
 

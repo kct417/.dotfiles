@@ -1,6 +1,4 @@
-#!/usr/bin/env bash
-
-STOW_DIR=~/.dotfiles/readline
+STOW_DIR=~/.dotfiles/stow/readline
 INPUTRC_STOW=$STOW_DIR/.inputrc
 INPUTRC_USER=~/.inputrc
 

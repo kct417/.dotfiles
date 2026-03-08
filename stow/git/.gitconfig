@@ -6,6 +6,9 @@
 	renames = copies
 	colorMoved = default
 
+[submodule]
+	recurse = true
+
 [alias]
 	a = add .
 

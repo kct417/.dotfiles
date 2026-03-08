@@ -1,8 +1,6 @@
-#!/usr/bin/env bash
+BIN_DIR=~/.dotfiles/bin
 
-SCRIPTS_DIR=~/.dotfiles/scripts
-
-source $SCRIPTS_DIR/install.sh
-source $SCRIPTS_DIR/stow.sh
-source $SCRIPTS_DIR/init.sh
+source $BIN_DIR/install.sh
+source $BIN_DIR/stow.sh
+source $BIN_DIR/init.sh
 

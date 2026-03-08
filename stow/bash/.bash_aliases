@@ -6,8 +6,17 @@ alias ...='cd ../..'
 alias cd..='cd ..'
 alias cd...='cd ../..'
 
+mkcd () {
+	mkdir $1 && cd $1
+}
+
 alias py='python3'
 alias python='python3'
+
+if command -v nvim >/dev/null 2>&1; then
+	alias vi='nvim'
+	alias vim='nvim'
+fi
 
 alias cat='cat -n'
 help() {
@@ -27,8 +36,4 @@ if command -v eza >/dev/null 2>&1; then
 	alias ll='eza -loAF --no-user --no-time --total-size --git --git-repos'
 	alias tree='eza -T -L=3'
 fi
-
-mkcd () {
-	mkdir $1 && cd $1
-}
 
