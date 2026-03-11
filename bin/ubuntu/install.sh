@@ -1,5 +1,5 @@
 echo "--- ubuntu/install.sh ---"
-sudo apt install bat build-essential eza fd-find ripgrep shellcheck stow trash-cli -y
+sudo apt install bat build-essential eza fd-find nodejs npm ripgrep shellcheck stow trash-cli -y
 sudo snap install bash-language-server --classic
 sudo apt autoremove
 

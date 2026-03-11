@@ -1,24 +1,33 @@
 syntax on
 filetype plugin indent on
 
-set showcmd
+set undofile
+
+set termguicolors
 set number
 set relativenumber
-set nostartofline
-set mouse=a
 set scrolloff=4
-set whichwrap+=<,>,[,],h,l
 
-set hlsearch
-set incsearch
-set ignorecase
-set smartcase
+set nostartofline
+set signcolumn=yes
+set whichwrap+=<,>,[,],h,l
+set backspace=indent,eol,start
+
+set mouse=a
 
 set smartindent
 set autoindent
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
+
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+set splitright
+set splitbelow
 
 set statusline=
 set statusline+=\ %F\ [%M]\ %Y\ %R
