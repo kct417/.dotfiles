@@ -7,6 +7,7 @@ set relativenumber
 set nostartofline
 set mouse=a
 set scrolloff=4
+set whichwrap+=<,>,[,],h,l
 
 set hlsearch
 set incsearch
@@ -16,6 +17,7 @@ set smartcase
 set smartindent
 set autoindent
 set tabstop=4
+set softtabstop=4
 set shiftwidth=4
 
 set statusline=
@@ -23,10 +25,3 @@ set statusline+=\ %F\ [%M]\ %Y\ %R
 set statusline+=%=
 set statusline+=\ row:\ %l\ col:\ %c\ percent:\ %p%%
 set laststatus=2
-
-nnoremap <C-z> <C-o>u
-nnoremap <C-y> <C-o><C-r>
-
-inoremap <C-z> <C-o>u
-inoremap <C-y> <C-o><C-r>
-

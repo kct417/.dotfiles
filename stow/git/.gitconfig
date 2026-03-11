@@ -39,4 +39,3 @@
 	subadd = submodule add
 	subup = submodule update --init --recursive
 	subsync = submodule sync --recursive
-
