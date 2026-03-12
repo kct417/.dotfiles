@@ -2,6 +2,9 @@
 	email = ctran156@calpoly.edu
 	name = Casey Tran
 
+[init]
+	defaultBranch = main
+
 [diff]
 	renames = copies
 	colorMoved = default
@@ -10,14 +13,14 @@
 	recurse = true
 
 [alias]
-	a = add .
+	a = add
+	ac = add .
+	aa = add -A
+	au = add -u
 
-	c = commit
-	ca = commit --a
-	cm = commit -m
-	cam = commit -am
-	cd = commit --amend
-	cdm = commit --amend -m
+	c = commit -m
+	ca = commit -am
+	cr = commit --amend -m
 
 	cl = clone
 	clr = clone --recursive
