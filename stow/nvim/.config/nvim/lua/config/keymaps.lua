@@ -2,9 +2,11 @@ local keymap = vim.keymap.set
 local opts = { noremap = true }
 
 keymap('n', '<leader><leader>', vim.cmd.Ex, opts)
-keymap('n', '<leader>x', ':source %<CR>', opts)
+keymap('n', '<leader>x', vim.cmd.so, opts)
+keymap('n', '<leader>u', ':up<CR>', opts)
 keymap('n', '<leader>w', ':w<CR>', opts)
 keymap('n', '<leader>q', ':q<CR>', opts)
+keymap('n', '<leader>Q', ':q!<CR>', opts)
 
 keymap('n', 'n', 'nzzzv', opts)
 keymap('n', 'N', 'Nzzzv', opts)

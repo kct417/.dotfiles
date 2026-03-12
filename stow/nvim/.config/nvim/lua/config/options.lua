@@ -1,15 +1,15 @@
 local opt = vim.opt
 
 vim.cmd('let g:netrw_banner = 0')
+vim.cmd(':hi statusline guibg=NONE')
 
-opt.swapfile = false
-opt.backup = false
 opt.undofile = true
 
 opt.termguicolors = true
 opt.number = true
 opt.relativenumber = true
 opt.scrolloff = 4
+opt.winborder = 'rounded'
 
 opt.startofline = false
 opt.colorcolumn = '80'

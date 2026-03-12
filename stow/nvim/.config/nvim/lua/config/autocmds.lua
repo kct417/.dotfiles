@@ -5,6 +5,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 		if not client then return end
 
 		if client:supports_method('textDocument/formatting') then
+			vim.lsp.completion.enable(true, client.id, args.buf, { autotrigger = true })
 			vim.api.nvim_create_autocmd('BufWritePre', {
 				buffer = args.buf,
 				callback = function() vim.lsp.buf.format({ bufnr = args.buf, id = client.id }) end,
@@ -12,6 +13,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 		end
 	end,
 })
+vim.cmd('set completeopt+=noselect')
 
 vim.api.nvim_create_autocmd('TermOpen', {
 	group = vim.api.nvim_create_augroup('TermOpen', { clear = true }),
@@ -23,5 +25,5 @@ vim.api.nvim_create_autocmd('TermOpen', {
 
 vim.api.nvim_create_autocmd('TextYankPost', {
 	group = vim.api.nvim_create_augroup('HighlightYank', { clear = true }),
-	callback = function() vim.highlight.on_yank() end,
+	callback = function() vim.hl.on_yank() end,
 })

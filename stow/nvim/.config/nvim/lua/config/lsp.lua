@@ -1,6 +1,6 @@
 vim.lsp.enable({
 	'bashls',
-	'luals',
+	'lua_ls',
 })
 
 vim.diagnostic.config({
