@@ -12,7 +12,7 @@ opt.scrolloff = 4
 opt.winborder = 'rounded'
 
 opt.startofline = false
-opt.colorcolumn = '80'
+opt.colorcolumn = '0'
 opt.signcolumn = 'yes'
 opt.whichwrap = 'hl<>[,]'
 opt.backspace = { 'start', 'eol', 'indent' }

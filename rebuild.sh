@@ -1,2 +1,2 @@
-source ~/.dotfiles/teardown.sh
-source ~/.dotfiles/bootstrap.sh
+source teardown.sh
+source bootstrap.sh

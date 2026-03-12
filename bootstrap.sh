@@ -1,3 +1,2 @@
-BIN_DIR=~/.dotfiles/bin
-source $BIN_DIR/install.sh
-source $BIN_DIR/init.sh
+for DIR in bin/*/; do [ -f "$DIR"/install.sh ] && source "$DIR"/install.sh; done
+for DIR in bin/*/; do [ -f "$DIR"/init.sh ] && source "$DIR"/init.sh; done
