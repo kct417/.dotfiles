@@ -6,12 +6,7 @@ return {
 		-- optional but recommended
 		{ 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
 	},
-	opts = {
-		defaults = {
-			preview = false,
-			file_ignore_patterns = { '^lsp/' },
-		}
-	},
+	opts = { defaults = { preview = false } },
 	config = function(_, opts)
 		local telescope = require('telescope')
 		local builtin = require('telescope.builtin')
