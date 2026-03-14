@@ -1,6 +1,8 @@
 vim.lsp.enable({
 	'bashls',
+	'jsonls',
 	'lua_ls',
+	'pyright',
 })
 
 vim.diagnostic.config({
