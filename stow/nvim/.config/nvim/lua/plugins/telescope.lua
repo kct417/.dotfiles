@@ -8,14 +8,12 @@ return {
 	},
 	opts = { defaults = { preview = false } },
 	config = function(_, opts)
-		local telescope = require('telescope')
+		require('telescope').setup(opts)
+
 		local builtin = require('telescope.builtin')
 		local state = require('telescope.actions.state')
 		local actions = require('telescope.actions')
-
 		local custom_find_files, custom_git_files, custom_config_files, custom_find_text
-
-		telescope.setup(opts)
 
 		custom_find_files = function(opts, no_ignore)
 			opts = opts or {}
@@ -30,15 +28,11 @@ return {
 				return true
 			end
 
-			if no_ignore then
-				opts.no_ignore = true
-				opts.hidden = true
-				opts.prompt_title = 'Find Files <ALL>'
-				builtin.find_files(opts)
-			else
-				opts.prompt_title = 'Find Files'
-				builtin.find_files(opts)
-			end
+			opts.prompt_title = no_ignore and 'Find Files <ALL>' or 'Find Files'
+			opts.hidden = no_ignore
+			opts.no_ignore = no_ignore
+
+			builtin.find_files(opts)
 		end
 
 		custom_git_files = function(opts, no_ignore)
@@ -54,15 +48,11 @@ return {
 				return true
 			end
 
-			if no_ignore then
-				opts.no_ignore = true
-				opts.hidden = true
-				opts.prompt_title = 'Find Git Files <ALL>'
-				builtin.git_files(opts)
-			else
-				opts.prompt_title = 'Find Git Files'
-				builtin.git_files(opts)
-			end
+			opts.prompt_title = no_ignore and 'Find Git Files <ALL>' or 'Find Git Files'
+			opts.hidden = no_ignore
+			opts.no_ignore = no_ignore
+
+			builtin.git_files(opts)
 		end
 
 		custom_config_files = function(opts, no_ignore)
@@ -78,15 +68,11 @@ return {
 				return true
 			end
 
-			if no_ignore then
-				opts.no_ignore = true
-				opts.hidden = true
-				opts.prompt_title = 'Find Config Files <ALL>'
-				builtin.find_files(vim.tbl_extend("force", opts, { cwd = vim.fn.stdpath('config') }))
-			else
-				opts.prompt_title = 'Find Config Files'
-				builtin.find_files(vim.tbl_extend("force", opts, { cwd = vim.fn.stdpath('config') }))
-			end
+			opts.prompt_title = no_ignore and 'Find Config Files <ALL>' or 'Find Config Files'
+			opts.hidden = no_ignore
+			opts.no_ignore = no_ignore
+
+			builtin.find_files(vim.tbl_extend("force", opts, { cwd = vim.fn.stdpath('config') }))
 		end
 
 		custom_find_text = function(opts, no_ignore)
@@ -102,15 +88,12 @@ return {
 				return true
 			end
 
-			if no_ignore then
-				opts.no_ignore = true
-				opts.hidden = true
-				opts.prompt_title = 'Find Text <ALL>'
-				builtin.live_grep(opts)
-			else
-				opts.prompt_title = 'Find Text'
-				builtin.live_grep(opts)
+			opts.prompt_title = no_ignore and 'Find Text <ALL>' or 'Find Text'
+			opts.additional_args = function()
+				return no_ignore and { '--hidden', '--no-ignore' } or {}
 			end
+
+			builtin.live_grep(opts)
 		end
 
 		local keymap = vim.keymap.set

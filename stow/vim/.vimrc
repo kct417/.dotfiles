@@ -2,6 +2,7 @@ syntax on
 filetype plugin indent on
 
 set undofile
+set viminfofile=~/.vim/.viminfo
 
 set termguicolors
 set number
