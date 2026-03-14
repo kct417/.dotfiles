@@ -6,9 +6,14 @@ return {
 		-- optional but recommended
 		{ 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
 	},
-	opts = { defaults = { preview = false } },
+	opts = {
+		defaults = { preview = false },
+		extensions = { fzf = {} },
+	},
 	config = function(_, opts)
-		require('telescope').setup(opts)
+		local telescope = require('telescope')
+		telescope.setup(opts)
+		telescope.load_extension('fzf')
 
 		local builtin = require('telescope.builtin')
 		local state = require('telescope.actions.state')
@@ -33,7 +38,7 @@ return {
 				opts.no_ignore = no_ignore
 
 				if extra_opts then
-					opts = vim.tbl_extend("force", opts, extra_opts(no_ignore))
+					opts = vim.tbl_extend('force', opts, extra_opts(no_ignore))
 				end
 
 				picker(opts)
