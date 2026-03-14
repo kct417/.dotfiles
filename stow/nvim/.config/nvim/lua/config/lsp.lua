@@ -3,6 +3,7 @@ vim.lsp.enable({
 	'jsonls',
 	'lua_ls',
 	'pyright',
+	'ruff',
 })
 
 vim.diagnostic.config({
