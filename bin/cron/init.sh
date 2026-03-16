@@ -1,7 +1,4 @@
-echo "--- ubuntu/install.sh ---"
-sudo apt install bat build-essential eza fd-find nodejs npm ripgrep stow trash-cli -y
-sudo apt autoremove
-
+echo "--- cron/init.sh ---"
 CRON=stow/cron/.config/cron
 if [ ! -d $CRON ]; then mkdir -p $CRON; fi
 

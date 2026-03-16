@@ -4,8 +4,8 @@ local opts = { noremap = true }
 keymap('n', '<leader><leader>', vim.cmd.Ex, opts)
 keymap('n', '<leader>x', vim.cmd.so, opts)
 
-keymap('i', 'jk', '<ESC>', opts)
-keymap('i', 'kj', '<ESC>', opts)
+keymap('i', 'fj', '<ESC>', opts)
+keymap('i', 'jf', '<ESC>', opts)
 
 keymap('n', '<leader>u', ':up<CR>', opts)
 keymap('n', '<leader>w', ':w<CR>', opts)

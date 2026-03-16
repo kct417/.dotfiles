@@ -1,4 +1,8 @@
 echo "--- readline/init.sh ---"
 INPUTRC=stow/readline/.inputrc
-if ! grep -qxF "set completion-ignore-case On" $INPUTRC; then echo "set completion-ignore-case On" >> $INPUTRC; fi
-if ! grep -qxF "set skip-completed-text On" $INPUTRC; then echo "set skip-completed-text On" >> $INPUTRC; fi
+
+COMPLETION="set completion-ignore-case On"
+SKIP="set skip-completed-text On"
+
+if ! grep -qxF "$COMPLETION" $INPUTRC; then echo "$COMPLETION" >> $INPUTRC; echo "$COMPLETION"; fi 
+if ! grep -qxF "$SKIP" $INPUTRC; then echo "$SKIP" >> $INPUTRC; echo "$SKIP"; fi
