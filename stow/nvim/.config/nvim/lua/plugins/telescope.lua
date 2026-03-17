@@ -7,7 +7,10 @@ return {
 		{ 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
 	},
 	opts = {
-		defaults = { preview = false },
+		defaults = {
+			preview = false,
+			file_ignore_patterns = { '^.local/', '^.cache/', '^.git/', '^.npm/', '^.venv/', '^node_modules/' },
+		},
 		extensions = { fzf = {} },
 	},
 	config = function(_, opts)
@@ -35,7 +38,7 @@ return {
 
 				opts.prompt_title = no_ignore and title .. ' <ALL>' or title
 				opts.hidden = no_ignore
-				opts.no_ignore = no_ignore
+				--opts.no_ignore = no_ignore
 
 				if extra_opts then
 					opts = vim.tbl_extend('force', opts, extra_opts(no_ignore))

@@ -4,8 +4,8 @@ local opts = { noremap = true }
 keymap('n', '<leader><leader>', vim.cmd.Ex, opts)
 keymap('n', '<leader>x', vim.cmd.so, opts)
 
-keymap('i', 'fj', '<ESC>', opts)
-keymap('i', 'jf', '<ESC>', opts)
+keymap({ 'i', 'v' }, 'fj', '<ESC>', opts)
+keymap({ 'i', 'v' }, 'jf', '<ESC>', opts)
 
 keymap('n', '<leader>u', ':up<CR>', opts)
 keymap('n', '<leader>w', ':w<CR>', opts)
@@ -31,15 +31,12 @@ keymap('n', '<C-j>', '<C-w>j', opts)
 keymap('n', '<C-k>', '<C-w>k', opts)
 keymap('n', '<C-l>', '<C-w>l', opts)
 
-keymap('n', '<leader>st',
-	function()
-		vim.cmd.new()
-		vim.cmd.term()
-		vim.cmd.startinsert()
-		vim.cmd.wincmd('J')
-		vim.api.nvim_win_set_height(0, 10)
-	end,
-	opts
-)
+keymap('n', '<leader>st', function()
+	vim.cmd.new()
+	vim.cmd.term()
+	vim.cmd.startinsert()
+	vim.cmd.wincmd('J')
+	vim.api.nvim_win_set_height(0, 10)
+end, opts)
 
 keymap('t', '<C-q>', '<C-\\><C-N>:q<CR>', opts)

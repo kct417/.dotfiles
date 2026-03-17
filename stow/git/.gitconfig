@@ -16,8 +16,8 @@
 	au = add -u
 
 	c = commit -m
-	ca = commit -am
-	cr = commit --amend -m
+	ac = commit -am
+	ca = commit --amend -m
 
 	cl = clone
 	clr = clone --recursive
