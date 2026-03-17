@@ -9,7 +9,7 @@ return {
 	opts = {
 		defaults = {
 			preview = false,
-			file_ignore_patterns = { '^.local/', '^.cache/', '^.git/', '^.npm/', '^.venv/', '^node_modules/' },
+			file_ignore_patterns = { '%.local/', '%.cache/', '%.git/', '%.npm/', '%.venv/', '%node_modules/' },
 		},
 		extensions = { fzf = {} },
 	},
