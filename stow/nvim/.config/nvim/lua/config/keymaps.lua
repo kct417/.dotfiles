@@ -31,17 +31,6 @@ keymap('n', '<C-j>', '<C-w>j', opts)
 keymap('n', '<C-k>', '<C-w>k', opts)
 keymap('n', '<C-l>', '<C-w>l', opts)
 
-vim.api.nvim_create_autocmd('FileType', {
-	pattern = 'netrw',
-	callback = function()
-		local opts = { buffer = true, remap = true }
-		keymap('n', 'h', '-', opts)
-		keymap('n', 'l', '<CR>', opts)
-		keymap('n', '.', 'gh', opts)
-		keymap('n', 'f', '%', opts)
-	end,
-})
-
 keymap('n', '<leader>st', function()
 	vim.cmd.new()
 	vim.cmd.term()
