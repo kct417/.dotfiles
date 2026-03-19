@@ -22,7 +22,7 @@ return {
 		local state = require('telescope.actions.state')
 		local actions = require('telescope.actions')
 
-		local function toggle_ignore(picker, title, extra_opts)
+		local function custom_picker(picker, title, extra_opts)
 			return function(opts, no_ignore)
 				opts = opts or {}
 				no_ignore = vim.F.if_nil(no_ignore, false)
@@ -30,8 +30,20 @@ return {
 				opts.attach_mappings = function(_, map)
 					map({ 'n', 'i' }, '<C-h>', function(prompt_bufnr)
 						local prompt = state.get_current_line()
+						local current_picker = state.get_current_picker(prompt_bufnr)
+						local cwd = current_picker.cwd and tostring(current_picker.cwd) or vim.loop.cwd()
 						actions.close(prompt_bufnr)
-						toggle_ignore(picker, title, extra_opts)({ default_text = prompt }, not no_ignore)
+						custom_picker(picker, title, extra_opts)({ default_text = prompt, cwd = cwd }, not no_ignore)
+					end)
+
+					map({ 'n', 'i' }, '<C-Up>', function(prompt_bufnr)
+						local prompt = state.get_current_line()
+						local current_picker = state.get_current_picker(prompt_bufnr)
+						local cwd = current_picker.cwd and tostring(current_picker.cwd) or vim.loop.cwd()
+						local parent_dir = vim.fs.dirname(cwd)
+						actions.close(prompt_bufnr)
+
+						custom_picker(picker, title, extra_opts)({ default_text = prompt, cwd = parent_dir }, no_ignore)
 					end)
 					return true
 				end
@@ -48,13 +60,13 @@ return {
 			end
 		end
 
-		local find_files = toggle_ignore(builtin.find_files, 'Find Files')
-		local find_config = toggle_ignore(builtin.find_files, 'Find Config Files',
+		local find_files = custom_picker(builtin.find_files, 'Find Files')
+		local find_config = custom_picker(builtin.find_files, 'Find Config Files',
 			function()
 				return { cwd = vim.fn.stdpath('config') }
 			end
 		)
-		local find_text = toggle_ignore(builtin.live_grep, 'Find Text',
+		local find_text = custom_picker(builtin.live_grep, 'Find Text',
 			function(no_ignore)
 				return no_ignore and { additional_args = { '--hidden', '--no-ignore' } } or {}
 			end
