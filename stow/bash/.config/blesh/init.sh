@@ -2,18 +2,18 @@ _command_start=0
 _command_time=""
 
 function blehook/preexec {
-    _command_start=$SECONDS
+	_command_start=$SECONDS
 }
 
 function blehook/postexec {
-    local elapsed=$(( SECONDS - _command_start ))
-    if (( elapsed < 60 )); then
-        _command_time="${elapsed}s"
-    else
-        local m=$(( elapsed / 60 ))
-        local s=$(( elapsed % 60 ))
-        _command_time="${m}m${s}s"
-    fi
+	local elapsed=$((SECONDS - _command_start))
+	if ((elapsed < 60)); then
+		_command_time="${elapsed}s"
+	else
+		local m=$((elapsed / 60))
+		local s=$((elapsed % 60))
+		_command_time="${m}m${s}s"
+	fi
 }
 
 blehook PREEXEC+=blehook/preexec

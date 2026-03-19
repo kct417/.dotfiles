@@ -1,4 +1,4 @@
-alias update='sudo apt update && sudo apt upgrade && sudo apt autoremove'  
+alias update='sudo apt update && sudo apt upgrade && sudo apt autoremove'
 alias packages='sudo apt-mark showmanual'
 
 alias ~='cd -'
@@ -10,17 +10,17 @@ alias cd...='cd ../..'
 alias rrm='rm -r'
 alias frrm='rm -rf'
 
-mkcd () { command mkdir "$1" && command cd "$1" || return; }
+mkcd() { command mkdir "$1" && command cd "$1" || return; }
 
 alias py='python3'
 alias python='python3'
 
 if command -v nvim >/dev/null 2>&1; then
-	vi() { if [ $# -eq 0 ]; then command nvim .; else command nvim "$@"; fi }
-	vim() { if [ $# -eq 0 ]; then command nvim .; else command nvim "$@"; fi }
+	vi() { if [ $# -eq 0 ]; then command nvim .; else command nvim "$@"; fi; }
+	vim() { if [ $# -eq 0 ]; then command nvim .; else command nvim "$@"; fi; }
 else
-	vi() { if [ $# -eq 0 ]; then command vim .; else command vim "$@"; fi }
-	vim() { if [ $# -eq 0 ]; then command vim .; else command vim "$@"; fi }
+	vi() { if [ $# -eq 0 ]; then command vim .; else command vim "$@"; fi; }
+	vim() { if [ $# -eq 0 ]; then command vim .; else command vim "$@"; fi; }
 fi
 
 alias cat='cat -n'
