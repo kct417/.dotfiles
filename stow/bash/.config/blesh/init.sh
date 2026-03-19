@@ -19,6 +19,8 @@ function blehook/postexec {
 blehook PREEXEC+=blehook/preexec
 blehook POSTEXEC+=blehook/postexec
 
+ble-face -s region_insert fg=27
+ble-face -s syntax_error fg=231
 ble-face -s auto_complete fg=238
 
 bleopt exec_exit_mark=
