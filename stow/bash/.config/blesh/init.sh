@@ -30,3 +30,7 @@ bleopt prompt_ruler=empty-line
 bleopt prompt_ps1_transient=trim
 bleopt prompt_rps1='${_command_time:- }'
 bleopt prompt_rps1_transient=1
+
+bleopt prompt_status_line='\w'
+bleopt prompt_status_align=right
+ble-face prompt_status_line='fg=231'
