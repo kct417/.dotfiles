@@ -1,5 +1,7 @@
+local keymap = vim.keymap.set
 local opts = { buffer = true, remap = true }
 
-vim.keymap.set("n", "h", "-", opts)
-vim.keymap.set("n", "l", "<CR>", opts)
-vim.keymap.set("n", ".", "gh", opts)
+keymap('n', 'h', '-', opts)
+keymap('n', 'l', '<CR>', opts)
+keymap('n', '.', 'gh', opts)
+keymap('n', 'f', '%', opts)
