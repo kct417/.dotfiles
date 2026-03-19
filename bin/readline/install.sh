@@ -3,7 +3,6 @@ DEFAULT=/etc/inputrc
 READLINE=stow/readline
 INPUTRC=$READLINE/.inputrc
 if [ ! -f $INPUTRC ]; then
-	mkdir -p $READLINE
 	if [ -f ~/.inputrc ]; then
 		cp ~/.inputrc $INPUTRC
 		echo $INPUTRC
