@@ -1,6 +1,12 @@
 syntax on
 filetype plugin indent on
 
+let s:undo_dir = expand('~/.vim/undo//'
+if !isdirectory(s:undo_dir)
+	call mkdir(s:undo_dir, 'p')
+endif
+
+let &undodir = s:undo_dir
 set undofile
 set viminfofile=~/.vim/.viminfo
 
