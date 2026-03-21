@@ -1,2 +1,2 @@
 echo "--- tmux/uninstall.sh ---"
-rm -rf ~/.config/tmux
+rm -vrf stow/tmux/.config/tmux/plugins
