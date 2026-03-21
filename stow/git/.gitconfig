@@ -1,9 +1,15 @@
 [user]
-	email = ctran156@calpoly.edu
+	email = caseytran4@gmail.com
 	name = Casey Tran
 
 [init]
 	defaultBranch = main
+
+[fetch]
+	parallel = 0
+
+[submodule]
+	fetchJobs = 0
 
 [diff]
 	renames = copies

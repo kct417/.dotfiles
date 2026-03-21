@@ -36,7 +36,7 @@ return {
 						custom_picker(picker, title, extra_opts)({ default_text = prompt, cwd = cwd }, not no_ignore)
 					end)
 
-					map({ 'n', 'i' }, '<C-Up>', function(prompt_bufnr)
+					map({ 'n', 'i' }, '<C-j>', function(prompt_bufnr)
 						local prompt = state.get_current_line()
 						local current_picker = state.get_current_picker(prompt_bufnr)
 						local cwd = current_picker.cwd and tostring(current_picker.cwd) or vim.loop.cwd()

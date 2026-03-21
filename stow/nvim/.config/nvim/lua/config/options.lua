@@ -1,7 +1,8 @@
+local cmd = vim.cmd
 local opt = vim.opt
+local status = ''
 
-vim.cmd('let g:netrw_banner = 0')
-vim.cmd(':hi statusline guibg=NONE')
+cmd(':hi statusline guibg=NONE')
 
 opt.undofile = true
 
@@ -33,7 +34,6 @@ opt.smartcase = true
 opt.splitright = true
 opt.splitbelow = true
 
-local status = ''
 status = status .. ' %F [%M] %Y %R'
 status = status .. '%='
 status = status .. ' row: %l col: %c percent: %p%%'
