@@ -26,11 +26,6 @@ keymap('v', '<A-j>', ':m \'>+1<CR>gv=gv', opts)
 keymap('v', '<A-k>', ':m \'<-2<CR>gv=gv', opts)
 keymap('n', '<leader>d', '"_d', opts)
 
-keymap('n', '<C-h>', '<C-w>h', opts)
-keymap('n', '<C-j>', '<C-w>j', opts)
-keymap('n', '<C-k>', '<C-w>k', opts)
-keymap('n', '<C-l>', '<C-w>l', opts)
-
 keymap('n', '<leader>st', function()
 	vim.cmd.new()
 	vim.cmd.term()

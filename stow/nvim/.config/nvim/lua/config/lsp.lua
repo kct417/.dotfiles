@@ -11,3 +11,9 @@ vim.diagnostic.config({
 	update_in_insert = true,
 	virtual_text = {},
 })
+
+vim.filetype.add({
+	extension = {
+		tmux = 'tmux',
+	},
+})
