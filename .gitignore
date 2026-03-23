@@ -2,6 +2,7 @@ stow/cron
 stow/tmux/.config/tmux/plugins
 stow/vim/.vim/.netrwhist
 stow/vim/.vim/.viminfo
+stow/vim/.vim/undo
 
 .bashrc
 .inputrc
