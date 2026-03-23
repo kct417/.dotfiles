@@ -1,10 +1,5 @@
 # GNU Stow Dotfiles
 
-## Requirements
-
-- Scripts assume a Unix-like environment (Linux, macOS, WSL).
-- The repository must be cloned to `~/.dotfiles`.
-
 ## Usage
 
 ```
