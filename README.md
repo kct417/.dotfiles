@@ -25,3 +25,7 @@ source bootstrap.sh
 ```
 :Copilot setup
 ```
+
+```
+:MasonInstall lua-language-server bash-language-server shellcheck pyright ruff
+```
