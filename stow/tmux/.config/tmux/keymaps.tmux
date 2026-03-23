@@ -5,7 +5,7 @@ set -g prefix2 C-a
 bind C-a send-prefix
 
 bind -n C-t new-window -c "#{pane_current_path}"
-bind -n C-w kill-pane
+bind -n C-e kill-pane
 bind -n C-d detach-client
 
 # Smart pane switching with awareness of Vim splits.
