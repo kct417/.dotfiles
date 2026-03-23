@@ -34,8 +34,8 @@ opt.smartcase = true
 opt.splitright = true
 opt.splitbelow = true
 
-status = status .. '%t [%M] %Y %R'
+status = status .. ' %t [%M] %Y '
 status = status .. '%='
-status = status .. 'row: %l col: %c percent: %p%%'
+status = status .. ' row: %l col: %c percent: %p%% '
 opt.statusline = status
 opt.laststatus = 2
