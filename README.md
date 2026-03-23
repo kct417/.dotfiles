@@ -12,7 +12,8 @@ git clone --depth=1 https://github.com/kct417/.dotfiles.git
 ```
 
 ```
-source .dotfiles/bootstrap.sh
+cd .dotfiles
+source bootstrap.sh
 ```
 
 ### Neovim
