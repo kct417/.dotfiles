@@ -18,9 +18,7 @@ source bootstrap.sh
 
 ### Neovim
 
-```
-:TransparentEnable
-```
+#### Lsp
 
 ```
 :Copilot setup
