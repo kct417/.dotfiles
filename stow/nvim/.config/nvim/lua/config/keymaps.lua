@@ -24,6 +24,7 @@ keymap('n', '<A-j>', ':m .+1<CR>==', opts)
 keymap('n', '<A-k>', ':m .-2<CR>==', opts)
 keymap('v', '<A-j>', ':m \'>+1<CR>gv=gv', opts)
 keymap('v', '<A-k>', ':m \'<-2<CR>gv=gv', opts)
+
 keymap('n', '<leader>d', '"_d', opts)
 
 keymap('n', '<leader>st', function()

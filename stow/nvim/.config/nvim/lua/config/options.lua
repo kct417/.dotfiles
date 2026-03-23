@@ -1,8 +1,8 @@
-local cmd = vim.cmd
 local opt = vim.opt
 local status = ''
 
-cmd(':hi statusline guibg=NONE')
+vim.api.nvim_set_hl(0, "StatusLine", { bg = "none" })
+vim.api.nvim_set_hl(0, "StatusLineNC", { bg = "none" })
 
 opt.undofile = true
 
@@ -34,8 +34,8 @@ opt.smartcase = true
 opt.splitright = true
 opt.splitbelow = true
 
-status = status .. ' %F [%M] %Y %R'
+status = status .. '%t [%M] %Y %R'
 status = status .. '%='
-status = status .. ' row: %l col: %c percent: %p%%'
+status = status .. 'row: %l col: %c percent: %p%%'
 opt.statusline = status
 opt.laststatus = 2

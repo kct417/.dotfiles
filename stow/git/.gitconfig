@@ -21,7 +21,8 @@
 	aa = add -A
 	au = add -u
 
-	c = commit -m
+	c = commit
+	cm = commit -m
 	ac = commit -am
 	ca = commit --amend -m
 
