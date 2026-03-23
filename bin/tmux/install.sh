@@ -1,1 +1,0 @@
-echo "--- tmux/install.sh ---"
