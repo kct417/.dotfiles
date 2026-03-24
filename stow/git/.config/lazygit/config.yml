@@ -1,0 +1,10 @@
+gui:
+  sidePanelWidth: 0.25
+  expandFocusedSidePanel: true
+  enlargedSideViewLocation: top
+  showFileTree: false
+  showRandomTip: false
+  showCommandLog: false
+  showBottomLine: false
+  commitHashLength: 0
+  screenMode: half

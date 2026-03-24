@@ -42,3 +42,7 @@ fi
 if command -v fdfind >/dev/null 2>&1; then
 	alias fd='fdfind'
 fi
+
+if command -v lazygit >/dev/null 2>&1; then
+	alias lg='lazygit'
+fi
