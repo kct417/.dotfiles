@@ -1,8 +1,10 @@
 set -g mouse on
 set -g set-clipboard on
+set -g extended-keys on
 
 set -g default-terminal tmux-256color
 set -ga terminal-overrides ,*:Tc
+set -as terminal-features *:extkeys
 
 set -g renumber-windows on
 set -g base-index 1

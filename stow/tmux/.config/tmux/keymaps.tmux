@@ -55,9 +55,9 @@ bind -T copy-mode-vi 'C-\' select-pane -l
 # menus
 
 bind C-n menu -T "#[align=centre]Dotfiles" -x C -y C \
-	"dotfiles"	d	"run-shell 'tmux send-keys -t #{pane_id} \"vi ~/.dotfiles\" Enter'" \
-	"nvim"		n	"run-shell 'tmux send-keys -t #{pane_id} \"vi ~/.config/nvim\" Enter'" \
-	"tmux"		t	"run-shell 'tmux send-keys -t #{pane_id} \"vi ~/.config/tmux\" Enter'" \
+	"dotfiles"	d	"run-shell 'tmux send-keys -t #{pane_id} \"cd ~/.dotfiles; vi\" Enter'" \
+	"nvim"		n	"run-shell 'tmux send-keys -t #{pane_id} \"cd ~/.config/nvim; vi\" Enter'" \
+	"tmux"		t	"run-shell 'tmux send-keys -t #{pane_id} \"cd ~/.config/tmux; vi\" Enter'" \
 	"quit"		q	""
 
 bind C-d menu -T "#[align=centre]Dotfiles" -x C -y C \
@@ -71,11 +71,3 @@ bind C-d menu -T "#[align=centre]Dotfiles" -x C -y C \
 bind C-g popup -d "#{pane_current_path}" -w 90% -h 90% -E "lazygit"
 bind C-s popup -E 'bash -i -c "read -p \"Session name: \" name; tmux new-session -d -s \$name && tmux switch-client -t \$name"'
 bind C-l popup -E "tmux list-sessions | sed -E 's/:.*$//' | grep -v \"^$(tmux display-message -p '#S')\$\" | fzf --reverse | xargs tmux switch-client -t"
-
-# copy mode
-
-setw -g mode-keys vi
-bind -T copy-mode-vi v send-keys -X begin-selection
-bind -T copy-mode-vi C-v send-keys -X rectangle-toggle
-bind -T copy-mode-vi y send-keys -X copy-selection-and-cancel
-unbind -T copy-mode-vi MouseDragEnd1Pane
