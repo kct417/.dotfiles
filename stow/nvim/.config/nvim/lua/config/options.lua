@@ -11,6 +11,7 @@ opt.number = true
 opt.relativenumber = true
 opt.scrolloff = 4
 opt.winborder = 'rounded'
+opt.wrap = false
 
 opt.startofline = false
 opt.colorcolumn = '0'

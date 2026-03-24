@@ -17,6 +17,7 @@ set termguicolors
 set number
 set relativenumber
 set scrolloff=4
+set nowrap
 
 set nostartofline
 set signcolumn=yes

@@ -23,7 +23,6 @@ vim.g.maplocalleader = '\\'
 
 -- Setup lazy.nvim
 require('lazy').setup({
-	rocks = { enabled = false },
 	ui = { border = 'rounded' },
 	spec = {
 		-- import your plugins
@@ -34,4 +33,5 @@ require('lazy').setup({
 	install = { colorscheme = { 'habamax' } },
 	-- automatically check for plugin updates
 	checker = { enabled = true },
+	rocks = { enabled = false },
 })
