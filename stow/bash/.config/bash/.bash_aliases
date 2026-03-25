@@ -27,6 +27,7 @@ alias cat='cat -n'
 help() { "$@" --help; }
 if command -v batcat >/dev/null 2>&1; then
 	alias cat='batcat -p'
+	alias catp='batcat --pager=never'
 	alias catn='batcat -n'
 	export MANPAGER="batcat -plman"
 	help() { "$@" --help 2>&1 | command batcat --plain --language=help; }

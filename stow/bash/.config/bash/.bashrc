@@ -3,4 +3,6 @@ if [ -f ~/.config/bash/.bash_aliases ]; then . ~/.config/bash/.bash_aliases; fi
 if [ -f ~/.config/git/ssh-agent.sh ]; then . ~/.config/git/ssh-agent.sh; fi
 if [ -f ~/.config/bash/bash-prompt.sh ]; then . ~/.config/bash/bash-prompt.sh; fi
 if [ -f ~/.local/share/blesh/ble.sh ]; then source -- ~/.local/share/blesh/ble.sh; fi
+if [ -f ~/.config/bash/local.sh ]; then . ~/.config/bash/local.sh; fi
 if command -v zoxide >/dev/null 2>&1; then eval "$(zoxide init bash --cmd cd)"; fi
+[[ -z $TMUX ]] && source ~/.config/tmux/tmux.sh

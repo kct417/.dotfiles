@@ -54,16 +54,11 @@ bind -T copy-mode-vi 'C-\' select-pane -l
 
 # menus
 
-bind C-n menu -T "#[align=centre]Dotfiles" -x C -y C \
-	"dotfiles"	d	"run-shell 'tmux send-keys -t #{pane_id} \"cd ~/.dotfiles; vi\" Enter'" \
-	"nvim"		n	"run-shell 'tmux send-keys -t #{pane_id} \"cd ~/.config/nvim; vi\" Enter'" \
-	"tmux"		t	"run-shell 'tmux send-keys -t #{pane_id} \"cd ~/.config/tmux; vi\" Enter'" \
-	"quit"		q	""
-
-bind C-d menu -T "#[align=centre]Dotfiles" -x C -y C \
-	"dotfiles"	d	"run-shell 'tmux send-keys -t #{pane_id} \"cd ~/.dotfiles\" Enter'" \
-	"nvim"		n	"run-shell 'tmux send-keys -t #{pane_id} \"cd ~/.config/nvim\" Enter'" \
-	"tmux"		t	"run-shell 'tmux send-keys -t #{pane_id} \"cd ~/.config/tmux\" Enter'" \
+bind C-n menu -T "#[align=centre]Config" -x C -y C \
+	"dotfiles"	d	"new-window -c ~/.dotfiles '$SHELL -ic vi'" \
+	"bash"		b	"new-window -c ~/.dotfiles/stow/bash '$SHELL -ic vi'" \
+	"nvim"		n	"new-window -c ~/.dotfiles/stow/nvim/.config/nvim '$SHELL -ic vi'" \
+	"tmux"		t	"new-window -c ~/.dotfiles/stow/tmux/.config/tmux '$SHELL -ic vi'" \
 	"quit"		q	""
 
 # popups
