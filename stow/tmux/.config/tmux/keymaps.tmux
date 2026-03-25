@@ -54,7 +54,7 @@ bind -T copy-mode-vi 'C-\' select-pane -l
 
 # menus
 
-bind C-n menu -T "#[align=centre]Config" -x C -y C \
+bind C-c menu -T "#[align=centre]Config" -x C -y C \
 	"dotfiles"	d	"new-window -c ~/.dotfiles '$SHELL -ic vi'" \
 	"bash"		b	"new-window -c ~/.dotfiles/stow/bash '$SHELL -ic vi'" \
 	"nvim"		n	"new-window -c ~/.dotfiles/stow/nvim/.config/nvim '$SHELL -ic vi'" \
