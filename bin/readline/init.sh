@@ -1,7 +1,8 @@
 echo "--- readline/init.sh ---"
-INPUTRC=stow/readline/.inputrc
-CONFIG="if [ -f ~/.config/readline/.inputrc ]; then . ~/.config/readline/.inputrc; fi"
-if ! grep -qxF "$CONFIG" $INPUTRC; then
-	echo "$CONFIG" >>$INPUTRC
-	echo "$CONFIG"
+
+inputrc=stow/readline/.inputrc
+config="[ -f ~/.config/readline/.inputrc ] && include ~/.config/readline/.inputrc"
+
+if ! grep -qxF "$config" $inputrc; then
+	echo "$config" >>$inputrc; echo "$config"
 fi

@@ -1,2 +1,3 @@
 echo "--- stow/init.sh ---"
-for PKG in stow/*/; do stow -v --adopt --dotfiles -d stow -t ~ "$(basename "$PKG")"; done
+
+for pkg in stow/*/; do stow -v --adopt --dotfiles -d stow -t ~ "$(basename "$pkg")"; done

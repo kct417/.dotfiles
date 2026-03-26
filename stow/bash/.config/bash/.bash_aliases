@@ -40,10 +40,6 @@ if command -v eza >/dev/null 2>&1; then
 	alias treeh='eza -aT -L=3'
 fi
 
-if command -v fdfind >/dev/null 2>&1; then
-	alias fd='fdfind'
-fi
+command -v fdfind >/dev/null 2>&1 && alias fd='fdfind'
 
-if command -v lazygit >/dev/null 2>&1; then
-	alias lg='lazygit'
-fi
+command -v lazygit >/dev/null 2>&1 && alias lg='lazygit'

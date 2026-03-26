@@ -1,4 +1,5 @@
 echo "--- zoxide/uninstall.sh ---"
+
 rm -v ~/.local/bin/zoxide
 rm -vr ~/.local/share/zoxide
 rm -v ~/.local/share/man/man1/zoxide*.1

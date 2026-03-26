@@ -1,7 +1,8 @@
 echo "--- bash/init.sh ---"
-BASHRC=stow/bash/.bashrc
-CONFIG="if [ -f ~/.config/bash/.bashrc ]; then . ~/.config/bash/.bashrc; fi"
-if ! grep -qxF "$CONFIG" $BASHRC; then
-	echo "$CONFIG" >>$BASHRC
-	echo "$CONFIG"
+
+bashrc=stow/bash/.bashrc
+config="[ -f ~/.config/bash/.bashrc ] && source ~/.config/bash/.bashrc"
+
+if ! grep -qxF "$config" $bashrc; then
+	echo "$config" >> $bashrc; echo "$config"
 fi

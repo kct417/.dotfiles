@@ -1,11 +1,13 @@
 echo "--- readline/install.sh ---"
-DEFAULT=/etc/inputrc
-READLINE=stow/readline
-INPUTRC=$READLINE/.inputrc
-if [ ! -f $INPUTRC ]; then
+
+default=/etc/inputrc
+readline=stow/readline
+inputrc=$readline/.inputrc
+
+if [ ! -f $inputrc ]; then
 	if [ -f ~/.inputrc ]; then
-		cp -v ~/.inputrc $INPUTRC
+		cp -v ~/.inputrc $inputrc
 	else
-		cp -v $DEFAULT $INPUTRC
+		cp -v $default $inputrc
 	fi
 fi

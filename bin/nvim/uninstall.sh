@@ -1,4 +1,5 @@
 echo "--- nvim/uninstall.sh ---"
+
 rm -v ~/.local/bin/nvim
 rm -vr ~/.local/lib/nvim
 rm -vrf ~/.local/share/nvim

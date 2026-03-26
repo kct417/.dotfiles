@@ -1,13 +1,14 @@
 echo "--- cron/init.sh ---"
-CRON=stow/cron/.config/cron
-if [ ! -d $CRON ]; then mkdir -p $CRON; fi
 
-LOG=~/.config/cron/cron.log
-CRONJOB="0 12 1 * * yes | \$(which trash-empty) 30 >> $LOG"
-if ! crontab -l 2>/dev/null | grep -Fxq "$CRONJOB"; then
+cron=stow/cron/.config/cron
+log=~/.config/cron/cron.log
+cronjob="0 12 1 * * yes | \$(which trash-empty) 30 >> $log"
+
+if [ ! -d $cron ]; then mkdir -p $cron; fi
+if ! crontab -l 2>/dev/null | grep -Fxq "$cronjob"; then
 	(
 		crontab -l 2>/dev/null
-		echo "$CRONJOB"
+		echo "$cronjob"
 	) | crontab -
-	echo "$CRONJOB"
+	echo "$cronjob"
 fi
