@@ -15,10 +15,8 @@ if [ $1 = "install" ]; then
 
 else if [ $1 = "init" ]; then
 	echo "--- readline/init.sh ---"
-
-	if ! grep -qxF "$config" $inputrc; then
-		echo "$config" >> $inputrc; echo "$config"
-	fi
+  
+	! grep -qxF "$config" $inputrc && echo "$config" | tee -a $inputrc
 
 else if [ $1 = "uninstall" ]; then
 	echo "--- readline/uninstall.sh ---"

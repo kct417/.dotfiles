@@ -16,9 +16,7 @@ if [ $1 = "install" ]; then
 else if [ $1 = "init" ]; then
 	echo "--- bash/init.sh ---"
 
-	if ! grep -qxF "$config" $bashrc; then
-		echo "$config" | tee $bashrc; echo "$config"
-	fi
+	! grep -qxF "$config" $bashrc && echo "$config" | tee -a $bashrc
 
 else if [ $1 = "uninstall" ]; then
 	echo "--- bash/uninstall.sh ---"
