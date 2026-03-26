@@ -4,10 +4,8 @@ READLINE=stow/readline
 INPUTRC=$READLINE/.inputrc
 if [ ! -f $INPUTRC ]; then
 	if [ -f ~/.inputrc ]; then
-		cp ~/.inputrc $INPUTRC
-		echo $INPUTRC
+		cp -v ~/.inputrc $INPUTRC
 	else
-		cp $DEFAULT $INPUTRC
-		echo $INPUTRC
+		cp -v $DEFAULT $INPUTRC
 	fi
 fi

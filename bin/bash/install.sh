@@ -3,11 +3,9 @@ DEFAULT=/etc/skel/.bashrc
 BASHRC=stow/bash/.bashrc
 if [ ! -f $BASHRC ]; then
 	if [ -f ~/.bashrc ]; then
-		cp ~/.bashrc $BASHRC
-		echo $BASHRC
+		cp -v ~/.bashrc $BASHRC
 	else
-		cp $DEFAULT $BASHRC
-		echo $BASHRC
+		cp -v $DEFAULT $BASHRC
 	fi
 fi
 
