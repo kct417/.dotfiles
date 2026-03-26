@@ -1,2 +1,7 @@
-for script in bin/*; do source "$script" uninstall; done
-echo "Reloading shell: $SHELL"; exec $SHELL
+system=$(uname -s)
+
+source bin/system/$system.sh uninstall
+
+for script in bin/config/*; do source "$script" uninstall; done
+
+echo "Reloading $SHELL"; exec $SHELL
