@@ -1,5 +1,5 @@
 stow/bash/.bashrc
-stow/bash/.config/bash/local.sh
+stow/bash/.config/bash/.bash_local
 
 stow/cron
 
