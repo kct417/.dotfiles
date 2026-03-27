@@ -13,10 +13,13 @@ if [ $1 = 'init' ]; then
 		echo "$cronjob"
 	fi
 
+else if [ $1 = "init" ]; then
+	echo "--- cron/init.sh ---"
+
 else if [ $1 = 'uninstall' ]; then
 	echo "--- cron/uninstall.sh ---"
 
 	crontab -l 2>/dev/null | grep -vxF "$cronjob" | crontab -
 	echo "$cronjob"
 
-fi; fi
+fi; fi; fi

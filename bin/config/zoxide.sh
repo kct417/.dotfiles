@@ -5,6 +5,9 @@ if [ $1 = "install" ]; then
 		curl -vsSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
 	fi
 
+else if [ $1 = "init" ]; then
+	echo "--- zoxide/init.sh ---"
+
 else if [ $1 = "uninstall" ]; then
 	echo "--- zoxide/uninstall.sh ---"
 
@@ -13,4 +16,4 @@ else if [ $1 = "uninstall" ]; then
 	rm -v ~/.local/share/man/man1/zoxide*.1
 	find ~/.local -type d -empty -print -delete
 
-fi; fi
+fi; fi; fi

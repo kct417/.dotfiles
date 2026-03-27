@@ -9,6 +9,9 @@ if [ $1 = "install" ]; then
 		rm -vrf ~/.fzf
 	fi
 
+else if [ $1 = "init" ]; then
+	echo "--- fzf/init.sh ---"
+
 else if [ $1 = "uninstall" ]; then
 	echo "--- fzf/uninstall.sh ---"
 
@@ -20,4 +23,4 @@ else if [ $1 = "uninstall" ]; then
 		rm -vrf ~/.fzf 
 	fi
 
-fi; fi
+fi; fi; fi

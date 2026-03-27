@@ -13,10 +13,13 @@ if [ $1 = install ]; then
 		rm -v lazygit lazygit.tar.gz
 	fi
 
+else if [ $1 = "init" ]; then
+	echo "--- git/init.sh ---"
+
 else if [ $1 = uninstall ]; then
 	echo "--- git/uninstall.sh ---"
 
 	rm -v ~/.local/bin/lazygit
 	find ~/.local -type d -empty -print -delete
 
-fi; fi
+fi; fi; fi

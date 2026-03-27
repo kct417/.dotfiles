@@ -6,11 +6,11 @@ bind C-a send-prefix
 
 # sessions
 
-bind -n C-d detach-client
+bind C-d detach-client
 
 # windows
 
-bind -n C-t new-window -c "#{pane_current_path}"
+bind C-t new-window -c "#{pane_current_path}"
 
 bind -n M-h split-window -hb
 bind -n M-j split-window -v
@@ -29,7 +29,7 @@ bind -n M-9 select-window -t 9
 
 # panes
 
-bind -n C-e kill-pane
+bind C-w kill-pane
 
 # Smart pane switching with awareness of Vim splits.
 # See: https://github.com/christoomey/vim-tmux-navigator
@@ -64,6 +64,5 @@ bind C-c menu -T "#[align=centre]Config" -x C -y C \
 
 # popups
 
-bind C-g popup -d "#{pane_current_path}" -w 90% -h 90% -E "lazygit"
-bind C-s popup -E 'bash -i -c "read -p \"Session name: \" name; tmux new-session -d -s \$name && tmux switch-client -t \$name"'
+bind C-n popup -E 'bash -i -c "read -p \"Session name: \" name; tmux new-session -d -s \$name && tmux switch-client -t \$name"'
 bind C-l popup -E "tmux list-sessions | sed -E 's/:.*$//' | grep -v \"^$(tmux display-message -p '#S')\$\" | fzf --reverse | xargs tmux switch-client -t"

@@ -13,6 +13,8 @@ let &undodir = s:undo_dir
 set undofile
 set viminfofile=~/.vim/.viminfo
 
+let g:netrw_banner = 0
+
 set termguicolors
 set number
 set relativenumber

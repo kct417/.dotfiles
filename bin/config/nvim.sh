@@ -9,6 +9,9 @@ if [ $1 = "install" ]; then
 		curl -vL $url/$basename.tar.gz | tar -xzf - -C ~/.local --strip-components=1
 	fi
 
+else if [ $1 = "init" ]; then
+	echo "--- nvim/init.sh ---"
+
 else if [ $1 = "uninstall" ]; then
 	echo "--- nvim/uninstall.sh ---"
 
@@ -21,4 +24,4 @@ else if [ $1 = "uninstall" ]; then
 	rm -vr ~/.local/state/nvim
 	find ~/.local -type d -empty -print -delete
 
-fi; fi
+fi; fi; fi
