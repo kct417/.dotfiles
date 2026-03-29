@@ -3,6 +3,7 @@ local opts = { noremap = true }
 
 keymap('n', '<leader><leader>', vim.cmd.Ex, opts)
 keymap('n', '<leader>x', vim.cmd.so, opts)
+keymap('n', '<leader>cd', ':cd %<CR>', opts)
 
 keymap({ 'i', 'v' }, 'fj', '<ESC>', opts)
 keymap({ 'i', 'v' }, 'jf', '<ESC>', opts)
@@ -25,7 +26,8 @@ keymap('n', '<A-k>', ':m .-2<CR>==', opts)
 keymap('v', '<A-j>', ':m \'>+1<CR>gv=gv', opts)
 keymap('v', '<A-k>', ':m \'<-2<CR>gv=gv', opts)
 
-keymap('n', '<leader>d', '"_d', opts)
+keymap({ 'n', 'v' }, '<leader>d', '"_d', opts)
+keymap('v', '<leader>p', '"_dP', opts)
 
 keymap('n', '<leader>st', function()
 	vim.cmd.new()
