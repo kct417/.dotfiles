@@ -1,5 +1,6 @@
 alias update='sudo apt update && sudo apt upgrade && sudo apt autoremove'
 alias packages='sudo apt-mark showmanual'
+alias reload='echo "Reloading $SHELL"; exec "$SHELL"'
 
 alias ~='cd -'
 alias ..='cd ..'
