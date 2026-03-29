@@ -10,6 +10,8 @@ alias cd...='cd ../..'
 alias rrm='rm -r'
 alias frrm='rm -rf'
 
+help() { "$@" --help; }
+version() { "$@" --version; }
 mkcd() { command mkdir "$1" && command cd "$1" || return; }
 
 alias py='python3'
@@ -24,7 +26,6 @@ else
 fi
 
 alias cat='cat -n'
-help() { "$@" --help; }
 if command -v batcat >/dev/null 2>&1; then
 	alias cat='batcat -p'
 	alias catp='batcat --pager=never'
@@ -41,5 +42,5 @@ if command -v eza >/dev/null 2>&1; then
 fi
 
 command -v fdfind >/dev/null 2>&1 && alias fd='fdfind'
-
+command -v fzf >/dev/null 2>&1 && alias fzf='fzf --tmux'
 command -v lazygit >/dev/null 2>&1 && alias lg='lazygit'

@@ -1,7 +1,7 @@
 let mapleader = " "
 
 inoremap fj <Esc>
-inoremap jk <Esc>
+inoremap jf <Esc>
 
 nnoremap <leader><leader> :Ex<CR>
 nnoremap <leader>q :q<CR>

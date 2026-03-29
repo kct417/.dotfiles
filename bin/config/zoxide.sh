@@ -1,14 +1,14 @@
-if [ $1 = "install" ]; then
+if [ "$1" = "install" ]; then
 	echo "--- zoxide/install.sh ---"
 
 	if ! command -v zoxide >/dev/null 2>&1; then
 		curl -vsSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
 	fi
 
-else if [ $1 = "init" ]; then
+elif [ "$1" = "init" ]; then
 	echo "--- zoxide/init.sh ---"
 
-else if [ $1 = "uninstall" ]; then
+elif [ "$1" = "uninstall" ]; then
 	echo "--- zoxide/uninstall.sh ---"
 
 	rm -v ~/.local/bin/zoxide
@@ -16,4 +16,4 @@ else if [ $1 = "uninstall" ]; then
 	rm -v ~/.local/share/man/man1/zoxide*.1
 	find ~/.local -type d -empty -print -delete
 
-fi; fi; fi
+fi

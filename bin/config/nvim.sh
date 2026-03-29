@@ -1,4 +1,4 @@
-if [ $1 = "install" ]; then
+if [ "$1" = "install" ]; then
 	echo "--- nvim/install.sh ---"
 
 	if ! command -v nvim >/dev/null 2>&1; then
@@ -9,10 +9,10 @@ if [ $1 = "install" ]; then
 		curl -vL $url/$basename.tar.gz | tar -xzf - -C ~/.local --strip-components=1
 	fi
 
-else if [ $1 = "init" ]; then
+elif [ "$1" = "init" ]; then
 	echo "--- nvim/init.sh ---"
 
-else if [ $1 = "uninstall" ]; then
+elif [ "$1" = "uninstall" ]; then
 	echo "--- nvim/uninstall.sh ---"
 
 	rm -v ~/.local/bin/nvim
@@ -24,4 +24,4 @@ else if [ $1 = "uninstall" ]; then
 	rm -vr ~/.local/state/nvim
 	find ~/.local -type d -empty -print -delete
 
-fi; fi; fi
+fi

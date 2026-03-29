@@ -5,6 +5,7 @@ set -g extended-keys on
 set -g default-terminal tmux-256color
 set -ga terminal-overrides ,*:Tc
 set -as terminal-features *:extkeys
+set -sg escape-time 300
 
 set -g renumber-windows on
 set -g base-index 1
