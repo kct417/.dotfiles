@@ -25,10 +25,10 @@ if [ $1 = "install" ]; then
 
 	[ ${#install[@]} -gt 0 ] && sudo apt install -y "${install[@]}"
 
-else if [ $1 = "init" ]; then
+elif [ $1 = "init" ]; then
 	echo "--- ubuntu/init.sh ---"
 
-else if [ $1 = "uninstall" ]; then
+elif [ $1 = "uninstall" ]; then
 	echo "--- ubuntu/uninstall.sh ---"
 
 	uninstall=()
@@ -41,4 +41,4 @@ else if [ $1 = "uninstall" ]; then
 
 	[ ${#uninstall[@]} -gt 0 ] && sudo apt purge -y "${uninstall[@]}"
 
-fi; fi; fi
+fi
