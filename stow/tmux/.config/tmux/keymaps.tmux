@@ -55,10 +55,11 @@ bind -T copy-mode-vi 'C-\' select-pane -l
 # menus
 
 bind C-c menu -T "#[align=centre]Config" -x C -y C \
-	"dotfiles"	d	"new-window -c ~/.dotfiles '$SHELL -ic vi'" \
-	"bash"		b	"new-window -c ~/.dotfiles/stow/bash '$SHELL -ic vi'" \
+	"bin"		b	"new-window -c ~/.dotfiles/bin '$SHELL -ic vi'" \
+	"bash"		s	"new-window -c ~/.dotfiles/stow/bash '$SHELL -ic vi'" \
+	"vim"		v	"new-window -c ~/.dotfiles/stow/vi/.vim '$SHELL -ic vi'" \
+	"nvim"		n	"new-window -c ~/.dotfiles/stow/vi/.config/nvim '$SHELL -ic vi'" \
 	"tmux"		t	"new-window -c ~/.dotfiles/stow/tmux/.config/tmux '$SHELL -ic vi'" \
-	"vi"		v	"new-window -c ~/.dotfiles/stow/nvim/.config/nvim '$SHELL -ic vi'" \
 	"quit"		q	""
 
 # popups
