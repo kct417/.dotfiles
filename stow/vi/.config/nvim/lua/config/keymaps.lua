@@ -3,7 +3,7 @@ local opts = { noremap = true }
 
 keymap('n', '<leader><leader>', vim.cmd.Ex, opts)
 keymap('n', '<leader>x', vim.cmd.so, opts)
-keymap('n', '<leader>cd', ':cd %<CR>', opts)
+keymap('n', '<leader>cd', ':lcd %:p:h<CR>', opts)
 
 keymap({ 'i', 'v' }, 'fj', '<ESC>', opts)
 keymap({ 'i', 'v' }, 'jf', '<ESC>', opts)
