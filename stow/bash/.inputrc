@@ -1,0 +1,6 @@
+$include /etc/inputrc
+
+set completion-ignore-case on
+set skip-completed-text on
+
+$include ~/.config/bash/inputrc_local

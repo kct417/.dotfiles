@@ -1,13 +1,9 @@
-stow/bash/.bashrc
-stow/bash/.config/bash/.bash_local
-
-stow/cron
-
-stow/readline/.inputrc
+stow/bash/.config/bash/bashrc_local
+stow/bash/.config/bash/inputrc_local
 
 stow/tmux/.config/tmux/plugins
 stow/tmux/.config/tmux/local.tmux
 
-stow/vim/.vim/.netrwhist
-stow/vim/.vim/.viminfo
-stow/vim/.vim/undo
+stow/vi/.vim/.netrwhist
+stow/vi/.vim/.viminfo
+stow/vi/.vim/undo

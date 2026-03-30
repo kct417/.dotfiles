@@ -17,7 +17,8 @@ vim.filetype.add({
 		tmux = 'tmux',
 	},
 	filename = {
-		['.bashconfig'] = 'bash',
-		['.inputconfig'] = 'readline',
+		['bash_aliases'] = 'bash',
+		['bashrc_local'] = 'bash',
+		['inputrc_local'] = 'readline',
 	},
 })

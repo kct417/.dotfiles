@@ -1,4 +1,4 @@
-cron=stow/cron/.config/cron
+cron=~/.config/cron
 cronjob="0 12 1 * * yes | \$(which trash-empty) 30 >> $cron/cronjob.log"
 
 if [ "$1" = 'init' ]; then
