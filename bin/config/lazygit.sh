@@ -20,6 +20,5 @@ elif [ "$1" = uninstall ]; then
 	echo "--- lazygit/uninstall.sh ---"
 
 	rm -v ~/.local/bin/lazygit
-	find ~/.local -type d -empty -print -delete
 
 fi

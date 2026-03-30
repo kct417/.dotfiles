@@ -30,6 +30,7 @@ if [ "$#" -gt 0 ]; then
 				if [ -f bin/system/"$script".sh ]; then source bin/system/"$script".sh uninstall
 				else source bin/config/"$script".sh uninstall; fi
 			done
+			find ~/.local -type d -empty -print -delete
 		fi
 
 	else
@@ -44,6 +45,7 @@ if [ "$#" -gt 0 ]; then
 		elif [ "$1" = "uninstall" ]; then
 			source bin/system/"$system".sh uninstall
 			for script in bin/config/*; do source "$script" uninstall; done
+			find ~/.local -type d -empty -print -delete
 
 		fi
 	fi

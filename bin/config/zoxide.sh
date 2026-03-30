@@ -14,6 +14,5 @@ elif [ "$1" = "uninstall" ]; then
 	rm -v ~/.local/bin/zoxide
 	rm -vr ~/.local/share/zoxide
 	rm -v ~/.local/share/man/man1/zoxide*.1
-	find ~/.local -type d -empty -print -delete
 
 fi

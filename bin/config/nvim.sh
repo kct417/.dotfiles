@@ -22,6 +22,5 @@ elif [ "$1" = "uninstall" ]; then
 	rm -vr ~/.local/share/man/man1/nvim.1
 	rm -v ~/.local/share/icons/hicolor/*/apps/nvim.png
 	rm -vr ~/.local/state/nvim
-	find ~/.local -type d -empty -print -delete
 
 fi

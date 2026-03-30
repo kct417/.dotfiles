@@ -1,7 +1,10 @@
 cron=~/.config/cron
 cronjob="0 12 1 * * yes | \$(which trash-empty) 30 >> $cron/cronjob.log"
 
-if [ "$1" = 'init' ]; then
+if [ "$1" = "install" ]; then
+	echo "--- cron/install.sh ---"
+
+elif [ "$1" = 'init' ]; then
 	echo "--- cron/init.sh ---"
 
 	if [ ! -d $cron ]; then mkdir -p $cron; fi
@@ -12,9 +15,6 @@ if [ "$1" = 'init' ]; then
 		) | crontab -
 		echo "$cronjob"
 	fi
-
-elif [ "$1" = "init" ]; then
-	echo "--- cron/init.sh ---"
 
 elif [ "$1" = 'uninstall' ]; then
 	echo "--- cron/uninstall.sh ---"
