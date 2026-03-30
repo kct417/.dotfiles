@@ -1,7 +1,6 @@
 stow/bash/.config/bash/bashrc_local
 stow/bash/.config/bash/inputrc_local
 
-stow/tmux/.config/tmux/plugins
 stow/tmux/.config/tmux/local.tmux
 
 stow/vi/.vim/.netrwhist

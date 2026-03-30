@@ -3,12 +3,12 @@
 ## Usage
 
 ```
-git clone --depth=1 https://github.com/kct417/.dotfiles.git
+git clone --depth=1 git@github.com:kct417/.dotfiles.git
 ```
 
 ```
 cd .dotfiles
-source bootstrap.sh
+source installer.sh [install | init | uninstall] [config_name ...]
 ```
 
 ### Neovim
@@ -22,3 +22,8 @@ source bootstrap.sh
 ```
 :MasonInstall lua-language-server bash-language-server shellcheck
 ```
+
+## Limitations
+
+- All scripts must be run from the `.dotfiles` directory.
+- Only tested on Ubuntu and WSL.
