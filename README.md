@@ -20,5 +20,5 @@ source bootstrap.sh
 ```
 
 ```
-:MasonInstall lua-language-server bash-language-server shellcheck pyright ruff
+:MasonInstall lua-language-server bash-language-server shellcheck
 ```
