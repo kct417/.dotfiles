@@ -37,3 +37,8 @@ ble-face prompt_status_line='fg=231'
 
 ble-import -d integration/fzf-completion -C 'complete -o dirnames -o nospace -F _fzf_dir_completion cd'
 ble-import -d integration/fzf-key-bindings
+
+ble-bind -f 'M-C-?' kill-backward-cword
+ble-bind -f 'M-DEL' kill-backward-cword
+ble-bind -f 'M-C-h' kill-backward-cword
+ble-bind -f 'M-BS'  kill-backward-cword
