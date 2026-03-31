@@ -27,6 +27,7 @@ set whichwrap+=<,>,[,],h,l
 set backspace=indent,eol,start
 
 set mouse=a
+set clipboard=unnamedplus
 
 set smartindent
 set autoindent

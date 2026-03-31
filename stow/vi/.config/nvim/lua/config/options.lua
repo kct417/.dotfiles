@@ -20,6 +20,7 @@ opt.whichwrap = 'hl<>[,]'
 opt.backspace = { 'start', 'eol', 'indent' }
 
 opt.mouse = 'a'
+opt.clipboard = 'unnamedplus'
 
 opt.autoindent = true
 opt.smartindent = true
