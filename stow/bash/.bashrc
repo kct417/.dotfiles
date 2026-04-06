@@ -14,6 +14,7 @@ PS2="\[\e[95m\]❯\[\e[0m\] "
 [ -f ~/.config/bash/bashrc_local ] && source ~/.config/bash/bashrc_local
  
 [ -f ~/.config/git/ssh-agent.sh ] && source ~/.config/git/ssh-agent.sh
+[ -f ~/.config/git/git-prompt.sh ] && source ~/.config/git/git-prompt.sh
 [ -f ~/.local/share/blesh/ble.sh ] && source -- ~/.local/share/blesh/ble.sh
 
 command -v fzf >/dev/null 2>&1 && [ -f "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.bash ] && source "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.bash
