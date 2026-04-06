@@ -8,6 +8,7 @@ packages=(
 	"npm:npm"
 	"ripgrep:rg"
 	"stow:stow"
+	"tmux:tmux"
 	"trash-cli:trash"
 	"unzip:unzip"
 )
