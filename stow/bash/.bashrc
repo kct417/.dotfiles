@@ -17,7 +17,4 @@ PS2="\[\e[95m\]❯\[\e[0m\] "
 [ -f ~/.config/git/git-prompt.sh ] && source ~/.config/git/git-prompt.sh
 [ -f ~/.local/share/blesh/ble.sh ] && source -- ~/.local/share/blesh/ble.sh
 
-command -v fzf >/dev/null 2>&1 && [ -f "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.bash ] && source "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.bash
-command -v zoxide >/dev/null 2>&1 && eval "$(zoxide init bash --cmd cd)"
-
 [[ -z $TMUX ]] && source ~/.config/tmux/tmux.sh

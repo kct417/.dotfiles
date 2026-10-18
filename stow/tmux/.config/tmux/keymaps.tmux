@@ -31,38 +31,8 @@ bind -n M-9 select-window -t 9
 
 bind C-w kill-pane
 
-# Smart pane switching with awareness of Vim splits.
-# See: https://github.com/christoomey/vim-tmux-navigator
-vim_pattern='(\S+/)?g?\.?(view|l?n?vim?x?|fzf)(diff)?(-wrapped)?'
-is_vim="ps -o state= -o comm= -t '#{pane_tty}' \
-    | grep -iqE '^[^TXZ ]+ +${vim_pattern}$'"
-bind -n 'C-h' if-shell "$is_vim" 'send-keys C-h'  'select-pane -L'
-bind -n 'C-j' if-shell "$is_vim" 'send-keys C-j'  'select-pane -D'
-bind -n 'C-k' if-shell "$is_vim" 'send-keys C-k'  'select-pane -U'
-bind -n 'C-l' if-shell "$is_vim" 'send-keys C-l'  'select-pane -R'
-tmux_version='$(tmux -V | sed -En "s/^tmux ([0-9]+(.[0-9]+)?).*/\1/p")'
-if-shell -b '[ "$(echo "$tmux_version < 3.0" | bc)" = 1 ]' \
-    "bind -n 'C-\\' if-shell \"$is_vim\" 'send-keys C-\\'  'select-pane -l'"
-if-shell -b '[ "$(echo "$tmux_version >= 3.0" | bc)" = 1 ]' \
-    "bind -n 'C-\\' if-shell \"$is_vim\" 'send-keys C-\\\\'  'select-pane -l'"
-
 bind -T copy-mode-vi 'C-h' select-pane -L
 bind -T copy-mode-vi 'C-j' select-pane -D
 bind -T copy-mode-vi 'C-k' select-pane -U
 bind -T copy-mode-vi 'C-l' select-pane -R
 bind -T copy-mode-vi 'C-\' select-pane -l
-
-# menus
-
-bind C-c menu -T "#[align=centre]Config" -x C -y C \
-	"bin"		b	"new-window -c ~/.dotfiles/bin '$SHELL -ic vi'" \
-	"bash"		s	"new-window -c ~/.dotfiles/stow/bash '$SHELL -ic vi'" \
-	"vim"		v	"new-window -c ~/.dotfiles/stow/vi/.vim '$SHELL -ic vi'" \
-	"nvim"		n	"new-window -c ~/.dotfiles/stow/vi/.config/nvim '$SHELL -ic vi'" \
-	"tmux"		t	"new-window -c ~/.dotfiles/stow/tmux/.config/tmux '$SHELL -ic vi'" \
-	"quit"		q	""
-
-# popups
-
-bind C-n popup -E 'bash -i -c "read -p \"Session name: \" name; tmux new-session -d -s \$name && tmux switch-client -t \$name"'
-bind C-l popup -E "tmux list-sessions | sed -E 's/:.*$//' | grep -v \"^$(tmux display-message -p '#S')\$\" | fzf --reverse | xargs tmux switch-client -t"

@@ -1,16 +1,7 @@
 packages=(
-	"bat:batcat"
-	"build-essential:gcc"
 	"curl:curl"
-	"eza:eza"
-	"fd-find:fdfind"
-	"nodejs:node"
-	"npm:npm"
-	"ripgrep:rg"
 	"stow:stow"
 	"tmux:tmux"
-	"trash-cli:trash"
-	"unzip:unzip"
 )
 
 if [ $1 = "install" ]; then

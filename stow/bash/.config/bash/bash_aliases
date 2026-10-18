@@ -1,47 +1,11 @@
-alias update='sudo apt update && sudo apt upgrade && sudo apt autoremove'
-alias packages='sudo apt-mark showmanual'
-alias reload='echo "Reloading $SHELL"; exec "$SHELL"'
-
 alias ~='cd -'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias cd..='cd ..'
 alias cd...='cd ../..'
 
-alias rrm='rm -r'
-alias frrm='rm -rf'
+alias ls='ls --color=auto'
+alias ll='ls -la'
+alias la='ls -A'
+alias l='ls -CF'
 
-help() { "$@" --help; }
-version() { "$@" --version; }
-mkcd() { command mkdir "$1" && command cd "$1" || return; }
-
-alias py='python3'
-alias python='python3'
-
-if command -v nvim >/dev/null 2>&1; then
-	vi() { if [ $# -eq 0 ]; then command nvim .; else command nvim "$@"; fi; }
-	vim() { if [ $# -eq 0 ]; then command nvim .; else command nvim "$@"; fi; }
-else
-	vi() { if [ $# -eq 0 ]; then command vim .; else command vim "$@"; fi; }
-	vim() { if [ $# -eq 0 ]; then command vim .; else command vim "$@"; fi; }
-fi
-
-alias cat='cat -n'
-if command -v batcat >/dev/null 2>&1; then
-	alias cat='batcat -p'
-	alias catp='batcat --pager=never'
-	alias catn='batcat -n'
-	export MANPAGER="batcat -plman"
-	help() { "$@" --help 2>&1 | command batcat --plain --language=help; }
-fi
-
-if command -v eza >/dev/null 2>&1; then
-	alias ls='eza -1'
-	alias ll='eza -loAF --no-user --no-time --total-size --git --git-repos'
-	alias tree='eza -T -L=3'
-	alias treeh='eza -aT -L=3'
-fi
-
-command -v fdfind >/dev/null 2>&1 && alias fd='fdfind'
-command -v fzf >/dev/null 2>&1 && alias fzf='fzf --tmux'
-command -v lazygit >/dev/null 2>&1 && alias lg='lazygit'
