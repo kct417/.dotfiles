@@ -1,10 +1,11 @@
 local api = vim.api
 
 api.nvim_create_autocmd("FileType", {
-  pattern = "netrw",
-  callback = function()
-    vim.opt_local.clipboard = ""
-  end,
+	group = api.nvim_create_augroup('Netrw', { clear = true }),
+	pattern = "netrw",
+	callback = function()
+		vim.opt_local.clipboard = ""
+	end,
 })
 
 api.nvim_create_autocmd('LspAttach', {
