@@ -3,14 +3,12 @@ set -g set-clipboard on
 set -g extended-keys on
 
 set -g default-terminal tmux-256color
-set -ga terminal-overrides ,*:Tc
-set -as terminal-features *:extkeys
-set -sg escape-time 300
+set -as terminal-features ,*:RGB
+set -s escape-time 10
 
 set -g renumber-windows on
 set -g base-index 1
-set -g pane-base-index 1
-setw -g pane-base-index 1
+set -wg pane-base-index 1
 
 # theme
 
@@ -37,11 +35,11 @@ set -g pane-active-border-style fg=${blue}
 
 # Windows
 set -g window-status-separator ""
-set -g window-status-style fg=${fg},none
-set -g window-status-activity-style fg=${fg},none
+set -g window-status-style fg=${fg}
+set -g window-status-activity-style fg=${fg}
 
 # Statusline - current window
-set -g window-status-current-format "#[fg=${blue}] #I: #{?client_prefix,#[fg=${magenta}],#[fg=${cyan}]}(✓) #[fg=${cyan}]#(echo '#{pane_current_path}' | rev | cut -d'/' -f-2 | rev) #[fg=${magenta}]"
+set -g window-status-current-format "#[fg=${blue}] #I: #{?client_prefix,#[fg=${magenta}],#[fg=${cyan}]}(✓) #[fg=${cyan}]#{b:d:pane_current_path}/#{b:pane_current_path}"
 
 # Statusline - other windows
 set -g window-status-format "#[fg=${blue}] #I: #[fg=${fg}]#W"

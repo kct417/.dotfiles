@@ -1,5 +1,7 @@
 unbind r
 bind r source-file ~/.config/tmux/tmux.conf \; display "Reloaded tmux config"
+bind s choose-tree -ZsK '#{?#{e|<:#{line},9},#{e|+:1,#{line}},#{?#{e|<:#{line},35},M-#{a:#{e|+:97,#{e|-:#{line},9}}},}}'
+bind w choose-tree -ZwK '#{?#{e|<:#{line},9},#{e|+:1,#{line}},#{?#{e|<:#{line},35},M-#{a:#{e|+:97,#{e|-:#{line},9}}},}}'
 
 set -g prefix2 C-a
 bind C-a send-prefix

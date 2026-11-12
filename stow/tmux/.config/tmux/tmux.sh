@@ -6,4 +6,4 @@ if ! tmux has-session -t $SESSION_NAME 2>/dev/null; then
 	tmux send-keys -t $SESSION_NAME:nvim 'nvim .' C-m
 fi
 
-tmux a -t $SESSION_NAME
+exec tmux a -t $SESSION_NAME
